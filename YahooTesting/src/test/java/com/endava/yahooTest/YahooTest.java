@@ -44,7 +44,7 @@ public class YahooTest {
 
         //Insert the password
         WebElement passwordField = webDriver.findElement(By.id("login-passwd"));
-        passwordField.sendKeys("Plmoknijb19");
+        passwordField.sendKeys("");
 
         //Click "Sign in"
         WebElement signInBtn = webDriver.findElement(By.id("login-signin"));
@@ -93,7 +93,7 @@ public class YahooTest {
         WebElement clickOnSent = webDriver.findElement(By.xpath(".//li[@id='Sent']//a[@class='btn btn-sent']//span[@class='icon-text foldername']"));
         clickOnSent.click();
 
-       //Last received mail
+       //Verify with an assert the name of the person which sent the latest mail
         WebElement lastReceivedMail = webDriver.findElement(By.xpath(".//div[@id='msg-list']//div[2]//div[contains(@class, 'name first')]"));
         Assert.assertEquals("irina.cristiana19@yahoo.com", lastReceivedMail.getText());
 
